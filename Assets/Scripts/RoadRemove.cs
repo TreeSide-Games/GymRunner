@@ -10,6 +10,6 @@ public class RoadRemove : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         OnRoadDestroyed.Invoke();
-        //Destroy(gameObject);
+        Destroy(gameObject);
     }
 }

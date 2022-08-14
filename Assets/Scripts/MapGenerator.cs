@@ -8,8 +8,8 @@ public class MapGenerator : MonoBehaviour
     [SerializeField] GameObject roadPrefab;
     [SerializeField] List<GameObject> itemPrefab = new List<GameObject>();
 
-    
-    List<GameObject> roads = new List<GameObject>();
+
+    [SerializeField] List<GameObject> roads = new List<GameObject>();
 
     [SerializeField] int maxRoadToPlace = 10;
 
@@ -31,7 +31,8 @@ public class MapGenerator : MonoBehaviour
         var road = Instantiate(roadPrefab);
 
         road.transform.position = Vector3.forward * roadDistance * 3;
-        road.transform.rotation = Quaternion.Euler(0f, 90f, -180f);
+        road.transform.rotation = Quaternion.Euler(0f, -90f, -180f);
+
         road.GetComponent<RoadRemove>().OnRoadDestroyed += RemoveRoad;
 
         roads.Add(road);
@@ -94,7 +95,7 @@ public class MapGenerator : MonoBehaviour
 
     private void RemoveRoad()
     {
-        Destroy(roads[0]);
+        //Destroy(roads[0]);
         roads.RemoveAt(0);
     }
 }
