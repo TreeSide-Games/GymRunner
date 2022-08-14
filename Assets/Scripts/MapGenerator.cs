@@ -32,6 +32,7 @@ public class MapGenerator : MonoBehaviour
 
         road.transform.position = Vector3.forward * roadDistance * 3;
         road.transform.rotation = Quaternion.Euler(0f, 90f, -180f);
+        road.GetComponent<RoadRemove>().OnRoadDestroyed += RemoveRoad;
 
         roads.Add(road);
         roadDistance++;
@@ -82,14 +83,12 @@ public class MapGenerator : MonoBehaviour
     {
         while (true)
         {
-            AddRoad();
-
-            if (roads.Count >= maxRoadToPlace)
+            if (roads.Count < maxRoadToPlace)
             {
-                RemoveRoad();
+                AddRoad();
             }
 
-            yield return new WaitForSeconds(2.5f);
+            yield return new WaitForSeconds(0.5f);
         }
     }
 
@@ -98,6 +97,4 @@ public class MapGenerator : MonoBehaviour
         Destroy(roads[0]);
         roads.RemoveAt(0);
     }
-
-
 }
