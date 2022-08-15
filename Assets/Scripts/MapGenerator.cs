@@ -30,8 +30,10 @@ public class MapGenerator : MonoBehaviour
         ChooseItem();
         var road = Instantiate(roadPrefab);
 
-        road.transform.position = Vector3.forward * roadDistance * 3;
-        road.transform.rotation = Quaternion.Euler(0f, -90f, -180f);
+        road.transform.position = Vector3.forward * roadDistance * 1.9f;
+        road.transform.rotation = Quaternion.identity;
+
+        //road.transform.rotation = Quaternion.Euler(0f, -90f, -180f);
 
         road.GetComponent<RoadRemove>().OnRoadDestroyed += RemoveRoad;
 
@@ -60,23 +62,23 @@ public class MapGenerator : MonoBehaviour
         var item = Instantiate(itemToInstantiate);
         item.transform.parent = road.transform;
 
-        //item.transform.localPosition = Vector3.forward + Vector3.up * -3f;
+        item.transform.localPosition = Vector3.forward + Vector3.up * 0.2f;
 
-        item.transform.localPosition = Vector3.right + Vector3.up * -3f;
+        //item.transform.localPosition = Vector3.right + Vector3.up;
         //item.transform.localRotation = Quaternion.identity;
 
         var randomnes = UnityEngine.Random.Range(0f,1f);
 
-        
-        //if (randomnes < 0.3f)
-        //    item.transform.localPosition += Vector3.right * 0.3f;
-        //else if (randomnes > 0.6f)
-        //    item.transform.localPosition += Vector3.left * 0.3f;
 
         if (randomnes < 0.3f)
-            item.transform.localPosition += Vector3.forward * 3f / 10f;
+            item.transform.localPosition += Vector3.right * 0.3f;
         else if (randomnes > 0.6f)
-            item.transform.localPosition += Vector3.back * 3f / 10f;
+            item.transform.localPosition += Vector3.left * 0.3f;
+
+        //if (randomnes < 0.3f)
+        //    item.transform.localPosition += Vector3.forward * 3f / 10f;
+        //else if (randomnes > 0.6f)
+        //    item.transform.localPosition += Vector3.back * 3f / 10f;
 
     }
 

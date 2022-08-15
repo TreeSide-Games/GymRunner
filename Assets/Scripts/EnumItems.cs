@@ -8,6 +8,9 @@ public enum EnumItems
 {
     None,
     Protein,
+    PowerJuice,
     Coin,
-    Soda
+    Soda,
+    Burger,
+    Fries
 }
