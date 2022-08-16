@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2651074027090771154}
   - component: {fileID: 3678055965256342702}
   - component: {fileID: -6286915817493508863}
+  - component: {fileID: -1347412575282563494}
   m_Layer: 0
   m_Name: burgir
   m_TagString: Untagged
@@ -113,3 +114,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemType: 5
+--- !u!65 &-1347412575282563494
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4596624599662058759}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.1572533, y: 22.82087, z: 2.1729672}
+  m_Center: {x: 0.043722093, y: 3.4416254, z: 0.0315485}
