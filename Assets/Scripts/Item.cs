@@ -8,10 +8,13 @@ public class Item : MonoBehaviour
 {
     public EnumItems itemType;
     public bool isHealthy;
-    //public event Action OnCollectedItem;
+    public bool isMoney;
+    public static event Action<Item> OnCollectedItem;
 
     private void OnTriggerEnter(Collider other)
     {
+        OnCollectedItem.Invoke(gameObject.GetComponent<Item>());
+
         if (isHealthy)
             goodBehave();
         else
