@@ -9,7 +9,7 @@ public class MapGenerator : MonoBehaviour
     [SerializeField] List<GameObject> itemPrefab = new List<GameObject>();
 
 
-    [SerializeField] List<GameObject> roads = new List<GameObject>();
+    public static List<GameObject> roads = new List<GameObject>();
 
     [SerializeField] int maxRoadToPlace = 10;
 
@@ -35,10 +35,9 @@ public class MapGenerator : MonoBehaviour
 
         //road.transform.rotation = Quaternion.Euler(0f, -90f, -180f);
 
-        road.GetComponent<RoadRemove>().OnRoadDestroyed += RemoveRoad;
-
         roads.Add(road);
         roadDistance++;
+        road.name += roadDistance;
 
         PlaceItemOn(road.transform);
     }
@@ -62,7 +61,7 @@ public class MapGenerator : MonoBehaviour
         var item = Instantiate(itemToInstantiate);
         item.transform.parent = road.transform;
 
-        item.transform.localPosition = Vector3.forward + Vector3.up * 0.2f;
+        item.transform.localPosition = Vector3.forward * UnityEngine.Random.Range(-1f,1f) + Vector3.up * 0.2f;
 
         //item.transform.localPosition = Vector3.right + Vector3.up;
         //item.transform.localRotation = Quaternion.identity;
@@ -93,11 +92,5 @@ public class MapGenerator : MonoBehaviour
 
             yield return new WaitForSeconds(0.5f);
         }
-    }
-
-    private void RemoveRoad()
-    {
-        //Destroy(roads[0]);
-        roads.RemoveAt(0);
     }
 }

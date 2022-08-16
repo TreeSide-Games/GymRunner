@@ -5,11 +5,9 @@ using UnityEngine;
 
 public class RoadRemove : MonoBehaviour
 {
-    public event Action OnRoadDestroyed;
-
     private void OnTriggerExit(Collider other)
     {
-        OnRoadDestroyed.Invoke();
+        MapGenerator.roads.Remove(gameObject);
         Destroy(gameObject);
     }
 }

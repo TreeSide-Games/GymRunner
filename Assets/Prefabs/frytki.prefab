@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1285158894442769151}
   - component: {fileID: 9146125669065125216}
   - component: {fileID: 5175171426861069612}
+  - component: {fileID: -2590707847361266615}
   m_Layer: 0
   m_Name: frytki
   m_TagString: Untagged
@@ -109,3 +110,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb54b4d39a608c94a8920180c37b185b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &-2590707847361266615
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780584281257691946}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 15.143676, y: 3.5774665, z: 24.016346}
+  m_Center: {x: -1.44278, y: 0.0031148796, z: -4.8578067}
