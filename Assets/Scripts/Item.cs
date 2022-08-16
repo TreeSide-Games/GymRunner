@@ -7,11 +7,26 @@ using UnityEngine;
 public class Item : MonoBehaviour
 {
     public EnumItems itemType;
-    public event Action OnCollectedItem;
+    public bool isHealthy;
+    //public event Action OnCollectedItem;
 
     private void OnTriggerEnter(Collider other)
     {
-        OnCollectedItem.Invoke();
+        if (isHealthy)
+            goodBehave();
+        else
+            badBehave();
+
         Destroy(gameObject);
+    }
+
+    void goodBehave()
+    {
+
+    }
+
+    void badBehave()
+    {
+
     }
 }
