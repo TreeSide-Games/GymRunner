@@ -109,6 +109,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemType: 3
+  isHealthy: 0
+  isMoney: 1
 --- !u!65 &-8103386205507283698
 BoxCollider:
   m_ObjectHideFlags: 0

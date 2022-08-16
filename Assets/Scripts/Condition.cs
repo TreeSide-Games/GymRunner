@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class Condition : MonoBehaviour
 {
-    // Start is called before the first frame update
+    Item conditionItem;
     void Start()
     {
-        
+        Item.OnCollectedItem += CheckItem;
     }
 
-    // Update is called once per frame
-    void Update()
+    void CheckItem(Item item)
     {
-        
+        if (item.isMoney) return;
+
+        if (item.isHealthy)
+            ConditionUI.instance.UpdateCondition(10);
+        else
+            ConditionUI.instance.UpdateCondition(-10);
     }
 }
