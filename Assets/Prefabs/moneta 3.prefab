@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d261c93df336814582a9f570a1ccf45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemType: 3
+  itemType: 5
   isHealthy: 0
   isMoney: 1
 --- !u!65 &-8103386205507283698

@@ -9,6 +9,8 @@ public enum EnumItems
     None,
     Protein,
     PowerJuice,
+    Water,
+    Apple,
     Coin,
     Soda,
     Burger,
