@@ -44,5 +44,8 @@ public class ConditionUI : MonoBehaviour
     public void UpdateCondition(float value)
     {
         conditionSlider.value += value;
+
+        if (conditionSlider.value <= 0)
+            SceneChanger.instance.DisplayMenu();
     }
 }

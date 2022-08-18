@@ -19,6 +19,11 @@ public class MoneyUI : MonoBehaviour
 
     [SerializeField] Text moneyAmount;
 
+    private void Start()
+    {
+        moneyAmount.text = PlayerPrefs.GetInt("PlayerMoney").ToString();
+    }
+
     public void UpdateMoneyAmount(int money)
     {
         moneyAmount.text = money.ToString();
