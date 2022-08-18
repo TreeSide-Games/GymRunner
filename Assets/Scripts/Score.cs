@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,9 +11,16 @@ public class Score : MonoBehaviour
     void Start()
     {
         score = 0;
-        speed = GetComponent<PlayerMovement>().speed;
+        speed = GetComponent<PlayerMovement>().Speed;
+
+        GetComponent<PlayerMovement>().OnSpeedChange += UpdateSpeed;
 
         StartCoroutine(ScoreIncreasCoroutine());
+    }
+
+    void UpdateSpeed()
+    {
+        speed = GetComponent<PlayerMovement>().Speed;
     }
 
     IEnumerator ScoreIncreasCoroutine()

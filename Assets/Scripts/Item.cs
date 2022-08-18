@@ -25,11 +25,11 @@ public class Item : MonoBehaviour
 
     void goodBehave()
     {
-
+        PlayerMovement.instance.Speed += 1f;
     }
 
     void badBehave()
     {
-
+        PlayerMovement.instance.Speed -= 1f;
     }
 }
