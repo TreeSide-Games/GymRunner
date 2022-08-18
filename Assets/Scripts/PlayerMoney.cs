@@ -11,8 +11,6 @@ public class PlayerMoney : MonoBehaviour
     {
         Item.OnCollectedItem += CheckItem;
         money = PlayerPrefs.GetInt("PlayerMoney");
-
-        MoneyUI.instance.UpdateMoneyAmount(money);
     }
 
     private void CheckItem(Item item)
