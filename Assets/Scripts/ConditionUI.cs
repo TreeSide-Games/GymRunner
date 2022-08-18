@@ -20,7 +20,7 @@ public class ConditionUI : MonoBehaviour
 
     [SerializeField] Slider conditionSlider;
 
-    //public static event Action OnConditionEnd;
+    public static event Action OnConditionEnd;
 
     void Start()
     {
@@ -46,6 +46,7 @@ public class ConditionUI : MonoBehaviour
         conditionSlider.value += value;
 
         if (conditionSlider.value <= 0)
-            SceneChanger.instance.DisplayMenu();
+            OnConditionEnd.Invoke();
+            //SceneChanger.instance.DisplayMenu();
     }
 }

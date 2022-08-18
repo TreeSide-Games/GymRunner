@@ -7,6 +7,7 @@ public class Score : MonoBehaviour
 {
     float score;
     float speed;
+    public float Speed { get { return speed; }}
 
     void Start()
     {
