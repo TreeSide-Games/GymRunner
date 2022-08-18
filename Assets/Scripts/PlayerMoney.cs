@@ -10,6 +10,9 @@ public class PlayerMoney : MonoBehaviour
     void Start()
     {
         Item.OnCollectedItem += CheckItem;
+        money = PlayerPrefs.GetInt("PlayerMoney");
+
+        MoneyUI.instance.UpdateMoneyAmount(money);
     }
 
     private void CheckItem(Item item)
@@ -18,6 +21,7 @@ public class PlayerMoney : MonoBehaviour
         {
             money += 3;
             MoneyUI.instance.UpdateMoneyAmount(money);
+            PlayerPrefs.SetInt("PlayerMoney", money);
         }
     }
 }

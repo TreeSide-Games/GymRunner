@@ -19,11 +19,6 @@ public class MoneyUI : MonoBehaviour
 
     [SerializeField] Text moneyAmount;
 
-    void Start()
-    {
-        moneyAmount.text = "0";
-    }
-
     public void UpdateMoneyAmount(int money)
     {
         moneyAmount.text = money.ToString();
