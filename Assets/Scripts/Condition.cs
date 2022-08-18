@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Condition : MonoBehaviour
 {
-    Item conditionItem;
     void Start()
     {
         Item.OnCollectedItem += CheckItem;
