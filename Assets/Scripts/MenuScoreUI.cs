@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class MenuScoreUI : MonoBehaviour
 {
+    [SerializeField] Text actualScoreTitle;
     [SerializeField] Text actualScoreText;
     [SerializeField] Text recordScoreText;
 
@@ -38,6 +39,10 @@ public class MenuScoreUI : MonoBehaviour
 
     private void DisplayNewRecord()
     {
+        actualScoreTitle.text = "NEW RECORD";
+        actualScoreTitle.color = Color.green; //Color.HSVToRGB(97f,100f,82f); //new Color(81f, 209f, 1f, 255f);
+        actualScoreTitle.fontStyle = FontStyle.Bold;
 
+        actualScoreText.fontStyle = FontStyle.Bold;
     }
 }

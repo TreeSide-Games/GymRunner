@@ -16,6 +16,6 @@ public class Condition : MonoBehaviour
         if (item.isHealthy)
             ConditionUI.instance.UpdateCondition(10);
         else
-            ConditionUI.instance.UpdateCondition(-10);
+            ConditionUI.instance.UpdateCondition(-50);
     }
 }

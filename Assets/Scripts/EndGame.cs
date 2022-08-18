@@ -19,6 +19,6 @@ public class EndGame : MonoBehaviour
 
     void SaveData()
     {
-        PlayerPrefs.SetInt("Score", (int)Player.GetComponent<Score>().Speed);
+        PlayerPrefs.SetInt("Score", (int)Player.GetComponent<Score>().ActualScore);
     }
 }

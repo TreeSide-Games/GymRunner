@@ -38,7 +38,7 @@ public class ConditionUI : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
 
-        //OnConditionEnd.Invoke();
+        OnConditionEnd.Invoke();
     }
 
     public void UpdateCondition(float value)

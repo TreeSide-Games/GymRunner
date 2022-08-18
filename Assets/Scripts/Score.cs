@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class Score : MonoBehaviour
 {
-    float score;
+    float actualScore;
     float speed;
-    public float Speed { get { return speed; }}
+    public float ActualScore { get { return actualScore; }}
 
     void Start()
     {
-        score = 0;
+        actualScore = 0;
         speed = GetComponent<PlayerMovement>().Speed;
 
         GetComponent<PlayerMovement>().OnSpeedChange += UpdateSpeed;
@@ -28,8 +28,8 @@ public class Score : MonoBehaviour
     {
         while (true)
         {
-            score += 1f * speed / 2f;
-            ScoreUI.instance.UpdateScoreAmount((int)score);
+            actualScore += 1f * speed / 2f;
+            ScoreUI.instance.UpdateScoreAmount((int)actualScore);
             yield return new WaitForSeconds(0.5f);
         }
     }
