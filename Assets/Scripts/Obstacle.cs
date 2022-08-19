@@ -6,15 +6,15 @@ using UnityEngine;
 public class Obstacle : MonoBehaviour
 {
     public bool randomRotation;
+    public float prefPositionY;
 
     [SerializeField] float slowDownSpeed = 1f;
 
     void Start()
     {
-        if (randomRotation)
-        {
-            transform.localRotation *= Quaternion.Euler(Vector3.up * UnityEngine.Random.rotation.y);
-        }
+        transform.localPosition += Vector3.up * prefPositionY;
+
+        
     }
 
     private void OnTriggerEnter(Collider other)
