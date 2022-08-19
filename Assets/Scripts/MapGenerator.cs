@@ -7,7 +7,6 @@ public class MapGenerator : MonoBehaviour
 {
     [SerializeField] GameObject roadPrefab;
     [SerializeField] List<GameObject> itemPrefab = new List<GameObject>();
-    [SerializeField] List<GameObject> obstaclePrefab = new List<GameObject>();
 
 
     public static List<GameObject> roads = new List<GameObject>();
@@ -43,30 +42,6 @@ public class MapGenerator : MonoBehaviour
         road.name += roadDistance;
 
         PlaceItemOn(road.transform);
-
-        bool hasObstacle = UnityEngine.Random.value > 0.7f ? true : false;
-
-        if (hasObstacle)
-            PlaceObstacleOn(road.transform);
-    }
-
-    private void PlaceObstacleOn(Transform road)
-    {
-        var indexObstacleToInstantiate = new System.Random().Next(obstaclePrefab.Count);
-        var obstacle = Instantiate(obstaclePrefab[indexObstacleToInstantiate]);
-
-        obstacle.transform.parent = road.transform;
-
-        obstacle.transform.localPosition = Vector3.forward * UnityEngine.Random.Range(-1f, 1f);
-
-        float randomnes = UnityEngine.Random.Range(-0.4f, 0.4f);
-
-        obstacle.transform.localPosition += Vector3.right * randomnes;
-
-        if (obstacle.GetComponent<Obstacle>().randomRotation)
-        {
-            obstacle.transform.localRotation = Quaternion.Euler(Vector3.up * UnityEngine.Random.Range(0,360));
-        }
     }
 
     private GameObject ChooseItem()

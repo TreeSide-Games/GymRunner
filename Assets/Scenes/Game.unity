@@ -3121,9 +3121,6 @@ MonoBehaviour:
   - {fileID: 780584281257691946, guid: 3a14f199758f9644eb569f61f643148a, type: 3}
   - {fileID: 3217320785360050286, guid: d5fbebd0473ee3f488873c6e6f014eae, type: 3}
   - {fileID: 3217320785360050286, guid: d5fbebd0473ee3f488873c6e6f014eae, type: 3}
-  obstaclePrefab:
-  - {fileID: 1482605284564941166, guid: ff34f165c039cb14a962254a378c9480, type: 3}
-  - {fileID: 7887018932653008775, guid: d0654ba626b866d44a01b319339eed5e, type: 3}
   maxRoadToPlace: 20
 --- !u!4 &2139921217
 Transform:
