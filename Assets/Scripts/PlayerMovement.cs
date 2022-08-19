@@ -1,10 +1,33 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] float speed;
+    #region Singleton
+
+    public static PlayerMovement instance;
+    private void Awake()
+    {
+        if(instance == null)
+            instance = this;
+    }
+
+    #endregion
+
+    public event Action OnSpeedChange;
+    [SerializeField] float speed = 2f;
+    
+    public float Speed 
+    {
+        get { return speed; } 
+        set
+        {
+            speed = Mathf.Clamp(value,0.1f,12f);
+            OnSpeedChange.Invoke();
+        }
+    }
 
     void Start()
     {

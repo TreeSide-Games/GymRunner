@@ -17,6 +17,8 @@ public class MapGenerator : MonoBehaviour
 
     void Start()
     {
+        roads.Clear();
+
         for (int i = 0; i < maxRoadToPlace - 2; i++)
         {
             AddRoad();
@@ -90,7 +92,7 @@ public class MapGenerator : MonoBehaviour
                 AddRoad();
             }
 
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.1f);
         }
     }
 }
