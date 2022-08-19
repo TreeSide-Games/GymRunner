@@ -33,8 +33,8 @@ public class MenuScoreUI : MonoBehaviour
 
     private void DisplayScores()
     {
-        actualScoreText.text = score.ToString();
-        recordScoreText.text = record.ToString();
+        actualScoreText.text = score.ToString() + " m";
+        recordScoreText.text = record.ToString() + " m";
     }
 
     private void DisplayNewRecord()
