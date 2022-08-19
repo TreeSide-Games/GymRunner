@@ -8,6 +8,7 @@ public class MapGenerator : MonoBehaviour
     [SerializeField] GameObject roadPrefab;
     [SerializeField] List<GameObject> itemPrefab = new List<GameObject>();
     [SerializeField] List<GameObject> obstaclePrefab = new List<GameObject>();
+    [SerializeField] List<GameObject> environmentPrefab = new List<GameObject>();
 
 
     public static List<GameObject> roads = new List<GameObject>();
@@ -48,6 +49,34 @@ public class MapGenerator : MonoBehaviour
 
         if (hasObstacle)
             PlaceObstacleOn(road.transform);
+
+        bool hasEnvironment = UnityEngine.Random.value > 0.85f ? true : false;
+
+        if (hasEnvironment)
+            GenerateEnvironment();
+    }
+
+    private void GenerateEnvironment()
+    {
+        var indexEnvironmentToInstantiate = new System.Random().Next(environmentPrefab.Count);
+        var environmentObject = Instantiate(environmentPrefab[indexEnvironmentToInstantiate]);
+        //environmentObject.transform.parent = road.transform;
+
+        var environmentOptions = environmentObject.GetComponent<Environment>();
+
+        environmentObject.transform.localPosition = Vector3.forward * UnityEngine.Random.Range(10f, 55f) * roadDistance;
+
+        float RotationY = UnityEngine.Random.Range(0f, 1f) > 0.5f ? -159f : -21f;
+        float RotationZ = environmentOptions.isInvertedRotationZ ? -180f : 0f;
+
+        if(RotationY == -21f)
+            environmentObject.transform.localPosition += Vector3.right * environmentOptions.prefPositionX;
+        else
+            environmentObject.transform.localPosition += Vector3.right * environmentOptions.prefPositionX * -1f;
+
+        environmentObject.transform.localRotation = Quaternion.Euler(Vector3.up * RotationY + Vector3.forward * RotationZ);
+        environmentObject.transform.localPosition += Vector3.up * environmentOptions.prefPositionY;
+
     }
 
     private void PlaceObstacleOn(Transform road)
