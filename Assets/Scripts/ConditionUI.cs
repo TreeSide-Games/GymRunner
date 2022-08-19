@@ -39,6 +39,7 @@ public class ConditionUI : MonoBehaviour
         }
 
         OnConditionEnd.Invoke();
+        //SceneChanger.instance.DisplayMenu();
     }
 
     public void UpdateCondition(float value)
@@ -46,7 +47,9 @@ public class ConditionUI : MonoBehaviour
         conditionSlider.value += value;
 
         if (conditionSlider.value <= 0)
+        {
             OnConditionEnd.Invoke();
             //SceneChanger.instance.DisplayMenu();
+        }
     }
 }

@@ -5,6 +5,12 @@ using UnityEngine;
 public class EndGame : MonoBehaviour
 {
     [SerializeField] GameObject Player;
+    Score scoreToSave;
+
+    private void Awake()
+    {
+        scoreToSave = Player.GetComponent<Score>();
+    }
 
     void Start()
     {
@@ -19,6 +25,6 @@ public class EndGame : MonoBehaviour
 
     void SaveData()
     {
-        PlayerPrefs.SetInt("Score", (int)Player.GetComponent<Score>().ActualScore);
+        PlayerPrefs.SetInt("Score", (int)scoreToSave.ActualScore);
     }
 }

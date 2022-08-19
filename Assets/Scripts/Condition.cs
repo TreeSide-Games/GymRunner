@@ -18,4 +18,9 @@ public class Condition : MonoBehaviour
         else
             ConditionUI.instance.UpdateCondition(-50);
     }
+
+    private void OnDisable()
+    {
+        Item.OnCollectedItem -= CheckItem;
+    }
 }
