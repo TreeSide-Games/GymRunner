@@ -11,16 +11,8 @@ public class Item : MonoBehaviour
     public bool isMoney;
     public static event Action<Item> OnCollectedItem;
 
-    AudioSource collectingAudio;
-
-    private void Awake()
-    {
-        collectingAudio = GetComponent<AudioSource>();
-    }
-
     private void OnTriggerEnter(Collider other)
     {
-        collectingAudio.Play(0);
         OnCollectedItem.Invoke(gameObject.GetComponent<Item>());
 
         if (isHealthy)
