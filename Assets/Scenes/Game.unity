@@ -2899,6 +2899,7 @@ MonoBehaviour:
   environmentPrefab:
   - {fileID: 7812021907224822255, guid: 8540b5fccbe57ba43a5a0139ffb95590, type: 3}
   - {fileID: 6691770009406686348, guid: 8afd683c800ec3d46b3a0e16f7c70e54, type: 3}
+  - {fileID: 7122825644428155520, guid: 51904073c3196344ba14b3e664c01448, type: 3}
   maxRoadToPlace: 20
 --- !u!4 &2139921217
 Transform:
@@ -2986,6 +2987,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3397831447064354691, guid: e6fae86138ffc6f4882ae4532b48d84b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6030642254435885402, guid: e6fae86138ffc6f4882ae4532b48d84b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200609279632545488, guid: e6fae86138ffc6f4882ae4532b48d84b, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
