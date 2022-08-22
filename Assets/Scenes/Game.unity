@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 169a1b8f06c17c84e8de491f2bfef986, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.5946461, g: 0.39691833, b: 0.62159306, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2899,6 +2899,7 @@ MonoBehaviour:
   environmentPrefab:
   - {fileID: 7812021907224822255, guid: 8540b5fccbe57ba43a5a0139ffb95590, type: 3}
   - {fileID: 6691770009406686348, guid: 8afd683c800ec3d46b3a0e16f7c70e54, type: 3}
+  - {fileID: 7122825644428155520, guid: 51904073c3196344ba14b3e664c01448, type: 3}
   maxRoadToPlace: 20
 --- !u!4 &2139921217
 Transform:
@@ -2981,7 +2982,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: Postacv2
       objectReference: {fileID: 0}
+    - target: {fileID: 1598961826242535949, guid: e6fae86138ffc6f4882ae4532b48d84b, type: 3}
+      propertyPath: m_ClearFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3397831447064354691, guid: e6fae86138ffc6f4882ae4532b48d84b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6030642254435885402, guid: e6fae86138ffc6f4882ae4532b48d84b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200609279632545488, guid: e6fae86138ffc6f4882ae4532b48d84b, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
