@@ -1193,7 +1193,9 @@ MonoBehaviour:
   collectingHealthFoodAudio: {fileID: 8300000, guid: dfaa52d5a23dea946b7cf5d2165f5f73, type: 3}
   collectingFastFoodAudio: {fileID: 8300000, guid: b54dc012b2b6aa245aeba36b181389f5, type: 3}
   collectingCoinAudio: {fileID: 8300000, guid: 88e10ada5fa0ffd4e8daf5732b4c54a2, type: 3}
-  mainMusic: {fileID: 8300000, guid: d6ac9e249a1d8f8439664d6d6ff66bed, type: 3}
+  mainMusic:
+  - {fileID: 8300000, guid: d6ac9e249a1d8f8439664d6d6ff66bed, type: 3}
+  - {fileID: 8300000, guid: 18e7fe7aa9af76a458f5f0c2632d6dae, type: 3}
 --- !u!82 &700873591
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1204,7 +1206,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d6ac9e249a1d8f8439664d6d6ff66bed, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 0.3
   m_Pitch: 1
