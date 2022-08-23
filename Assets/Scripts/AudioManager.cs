@@ -18,7 +18,6 @@ public class AudioManager : MonoBehaviour
     }
     void Start()
     {
-        Item.OnCollectedItem -= launchAudio;
         Item.OnCollectedItem += launchAudio;
 
     }
@@ -34,5 +33,9 @@ public class AudioManager : MonoBehaviour
 
         audioSource.Play();
     }
-    
+
+    private void OnDisable()
+    {
+        Item.OnCollectedItem -= launchAudio;
+    }
 }
