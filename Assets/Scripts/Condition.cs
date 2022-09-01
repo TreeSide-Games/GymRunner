@@ -13,10 +13,7 @@ public class Condition : MonoBehaviour
     {
         if (item.isMoney) return;
 
-        if (item.isHealthy)
-            ConditionUI.instance.UpdateCondition(10);
-        else
-            ConditionUI.instance.UpdateCondition(-50);
+        ConditionUI.instance.UpdateCondition(item.conditionInpact);
     }
 
     private void OnDisable()

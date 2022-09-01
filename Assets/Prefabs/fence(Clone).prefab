@@ -112,4 +112,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   randomRotation: 0
   prefPositionY: 0.14
-  slowDownSpeed: 1
+  slowDownSpeed: 0.6

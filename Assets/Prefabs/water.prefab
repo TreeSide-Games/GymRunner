@@ -123,5 +123,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemType: 3
+  conditionInpact: 15
   isHealthy: 1
   isMoney: 0
