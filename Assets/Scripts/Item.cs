@@ -8,7 +8,7 @@ public class Item : MonoBehaviour
 {
     public EnumItems itemType;
     public float conditionInpact;
-    //public float speedIncreas;
+    [Range(-1f,1f)] public float speedIncreas;
     public bool isHealthy;
     public bool isMoney;
     public static event Action<Item> OnCollectedItem;
@@ -17,21 +17,18 @@ public class Item : MonoBehaviour
     {
         OnCollectedItem.Invoke(gameObject.GetComponent<Item>());
 
-        if (isHealthy)
-            goodBehave();
-        else
-            badBehave();
+        PlayerMovement.instance.Speed += speedIncreas;
 
         Destroy(gameObject);
     }
 
-    void goodBehave()
-    {
-        PlayerMovement.instance.Speed += 1f;
-    }
+    //void goodBehave()
+    //{
+    //    PlayerMovement.instance.Speed += 1f;
+    //}
 
-    void badBehave()
-    {
-        PlayerMovement.instance.Speed -= 1f;
-    }
+    //void badBehave()
+    //{
+    //    PlayerMovement.instance.Speed -= 1f;
+    //}
 }

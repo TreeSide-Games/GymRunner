@@ -114,6 +114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 1
   conditionInpact: 25
+  speedIncreas: 0.5
   isHealthy: 1
   isMoney: 0
 --- !u!114 &6606117064879332345
