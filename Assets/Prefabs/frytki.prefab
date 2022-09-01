@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemType: 8
+  conditionInpact: -10
   isHealthy: 0
   isMoney: 0
 --- !u!114 &5175171426861069612

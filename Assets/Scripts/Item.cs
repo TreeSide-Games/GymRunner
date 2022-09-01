@@ -7,6 +7,8 @@ using UnityEngine;
 public class Item : MonoBehaviour
 {
     public EnumItems itemType;
+    public float conditionInpact;
+    //public float speedIncreas;
     public bool isHealthy;
     public bool isMoney;
     public static event Action<Item> OnCollectedItem;
