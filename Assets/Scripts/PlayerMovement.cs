@@ -103,7 +103,7 @@ public class PlayerMovement : MonoBehaviour
         //}
 
         //transform.position += Vector3.right * joystick.Horizontal * speed * Time.deltaTime;
-        float horizontalMoveValue = Mathf.Clamp(transform.position.x + 1 * joystick.Horizontal * speed * Time.deltaTime, -0.45f, 0.45f);
+        float horizontalMoveValue = Mathf.Clamp(transform.position.x + 1 * joystick.Horizontal * 1.5f * Time.deltaTime, -0.45f, 0.45f);
 
         transform.position = new Vector3(horizontalMoveValue, transform.position.y, transform.position.z);
     }                                                                             
